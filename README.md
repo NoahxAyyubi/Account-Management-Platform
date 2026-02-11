@@ -13,6 +13,7 @@ Enterprise-level test automation framework demo for continuously validating crit
 
 ## Project Structure
 account-management-platform/
+```text
 ├── src/test/java/
 │   ├── auth/              # Authentication & session tests
 │   ├── subscription/      # Subscription management tests
@@ -20,7 +21,7 @@ account-management-platform/
 │   └── plans/             # Plan change & entitlement tests
 ├── pom.xml
 ├── README.md
-
+```
 ## Test Coverage
 - Authentication and user session validation
 - Subscription creation, update, and cancellation
