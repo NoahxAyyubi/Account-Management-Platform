@@ -75,9 +75,7 @@
               <include>**/*Test.java</include>
             </includes>
             <useSystemClassLoader>false</useSystemClassLoader>
-            <suiteXmlFiles>
-              <suiteXmlFile>${surefire.suiteXmlFiles}</suiteXmlFile>
-            </suiteXmlFiles>
+            <groups>${groups}</groups>
 
             <!-- Force Allure results output directory -->
             <systemPropertyVariables>
@@ -119,4 +117,3 @@
       </plugins>
   </build>
 </project>
-

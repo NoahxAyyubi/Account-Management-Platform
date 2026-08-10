@@ -1,0 +1,9 @@
+target/
+node_modules/
+.appium/
+*.log
+.idea/
+.vscode/
+
+# Place local-only APK builds under apps/ when you are ready to test.
+apps/*.apk

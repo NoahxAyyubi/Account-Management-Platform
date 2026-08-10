@@ -1,0 +1,9 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="AMP Mobile Appium Suite">
+    <test name="Android Emulator Tests">
+        <classes>
+            <class name="com.amp.mobile.tests.LoginMobileTest"/>
+            <class name="com.amp.mobile.tests.SmokeMobileTest"/>
+        </classes>
+    </test>
+</suite>

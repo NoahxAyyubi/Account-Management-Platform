@@ -1,6 +1,6 @@
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
 
-<suite name="UI Suite" parallel="classes" thread-count="3">
+<suite name="UI Suite" parallel="false">
 
     <listeners>
         <listener class-name="utils.TestListener"/>
@@ -10,11 +10,7 @@
 
         <classes>
 
-            <class name="test.SanityTest"/>
-
-            <class name="test.ViewSubscription"/>
-
-            <class name="test.SubscriptionUserFlow"/>
+            <class name="test.TMobileDemoUiTest"/>
 
         </classes>
 

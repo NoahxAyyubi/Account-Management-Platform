@@ -2,6 +2,7 @@ package drivers;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 
@@ -21,11 +22,14 @@ private static ThreadLocal<WebDriver> driver = new ThreadLocal<>();
 
         WebDriverManager.chromedriver().setup();
 
-        // OLD shared driver creation
-        // driver = new ChromeDriver();
+        ChromeOptions options = new ChromeOptions();
 
-        // NEW thread-safe driver creation
-        driver.set(new ChromeDriver());
+        if (Boolean.parseBoolean(System.getProperty("headless", "false"))) {
+            options.addArguments("--headless=new");
+            options.addArguments("--window-size=1440,1000");
+        }
+
+        driver.set(new ChromeDriver(options));
 
         driver.get().manage().window().maximize();
 

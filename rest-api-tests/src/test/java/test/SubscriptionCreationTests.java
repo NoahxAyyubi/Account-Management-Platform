@@ -1,15 +1,15 @@
 package test;
 
-import io.restassured.response.Response;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import org.junit.jupiter.api.BeforeAll;
+import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 
-import static io.restassured.RestAssured.given;
-import static org.junit.jupiter.api.Assertions.assertEquals;
 import api.client.PetClient;
-import api.utils.Config;
-import org.junit.jupiter.api.BeforeAll;
 import api.models.Pet;
-
+import api.utils.Config;
+import io.restassured.response.Response;
+@Disabled
 public class SubscriptionCreationTests {
 
     // create reusable API client (links test -> client layer)

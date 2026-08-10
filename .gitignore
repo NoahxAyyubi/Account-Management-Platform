@@ -22,3 +22,20 @@
 # virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
 hs_err_pid*
 replay_pid*
+
+# Local secrets and build output
+.env
+target/
+*/target/
+node_modules/
+*/node_modules/
+tmobile-demo-app/.env
+.jenkins-local-credentials
+
+# Generated test reports
+allure-results/
+*/allure-results/
+allure-report/
+*/allure-report/
+playwright-ui-tests/test-results/
+playwright-ui-tests/playwright-report/

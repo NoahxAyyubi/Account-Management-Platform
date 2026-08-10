@@ -20,7 +20,7 @@ public class BaseTest {
 
 
     // NEW setup with TestNG context sharing for listeners/screenshots
-    @BeforeMethod
+    @BeforeMethod(alwaysRun = true)
     public void setup(ITestContext context) {
 
         driver = DriverFactory.initDriver();
@@ -32,7 +32,7 @@ public class BaseTest {
                 .implicitlyWait(java.time.Duration.ofSeconds(5));
     }
 
-    @AfterMethod
+    @AfterMethod(alwaysRun = true)
     public void tearDown() {
         DriverFactory.quitDriver();
     }

@@ -1,0 +1,13 @@
+{
+  "name": "tmobile-demo-app",
+  "version": "1.0.0",
+  "description": "Deterministic T-Mobile-style demo target for SDET CI/CD practice.",
+  "main": "src/server.js",
+  "scripts": {
+    "start": "node src/server.js",
+    "dev": "node src/server.js"
+  },
+  "dependencies": {
+    "express": "^4.21.2"
+  }
+}

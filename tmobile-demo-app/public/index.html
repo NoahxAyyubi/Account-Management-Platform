@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>T-Mobile Demo Account Portal</title>
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <main class="shell">
+      <header class="app-header">
+        <div>
+          <p class="eyebrow">Week 6 CI Practice Target</p>
+          <h1>T-Mobile Demo Account Portal</h1>
+        </div>
+        <button id="healthCheck" type="button">Check Health</button>
+      </header>
+
+      <nav class="tabs" aria-label="Testing areas">
+        <button class="tab active" type="button" data-tab="account">Account UI</button>
+        <button class="tab" type="button" data-tab="api">API Test Surface</button>
+        <button class="tab" type="button" data-tab="database">Database Validation</button>
+      </nav>
+
+      <section class="panel active" id="account-panel" aria-labelledby="account-title">
+        <div class="panel-heading">
+          <h2 id="account-title">Account Login</h2>
+        </div>
+
+        <form id="loginForm" class="login-form">
+          <label for="email">Email</label>
+          <input id="email" name="email" type="email" value="qa.user@demo.com" />
+
+          <label for="password">Password</label>
+          <input id="password" name="password" type="password" value="Password123!" />
+
+          <button id="loginButton" type="submit">Log In</button>
+          <p id="loginError" class="error" role="alert"></p>
+        </form>
+
+        <section id="dashboard" class="dashboard" hidden>
+          <div class="summary">
+            <h2>Account Dashboard</h2>
+            <p id="customerName">Demo Customer</p>
+            <p>Status: <strong id="accountStatus">ACTIVE</strong></p>
+            <p>Current Plan: <strong id="currentPlan">Essentials</strong></p>
+          </div>
+
+          <table id="subscriptionTable">
+            <thead>
+              <tr>
+                <th>Subscription ID</th>
+                <th>Customer</th>
+                <th>Plan</th>
+                <th>Status</th>
+                <th>Monthly Price</th>
+              </tr>
+            </thead>
+            <tbody></tbody>
+          </table>
+
+          <div class="plan-change">
+            <label for="planSelect">Change subscription 1001 plan</label>
+            <select id="planSelect">
+              <option value="Essentials">Essentials</option>
+              <option value="Magenta">Magenta</option>
+              <option value="Premium">Premium</option>
+            </select>
+            <button id="changePlanButton" type="button">Change Plan</button>
+            <p id="planMessage" role="status"></p>
+          </div>
+        </section>
+      </section>
+
+      <section class="panel" id="api-panel" aria-labelledby="api-title">
+        <div class="panel-heading">
+          <h2 id="api-title">API Test Surface</h2>
+          <p>Stable endpoints for REST Assured smoke and regression tests.</p>
+        </div>
+        <ul class="endpoint-list">
+          <li><code>POST /api/auth/login</code></li>
+          <li><code>GET /api/subscriptions/1001</code></li>
+          <li><code>PUT /api/subscriptions/1001/plan</code></li>
+        </ul>
+      </section>
+
+      <section class="panel" id="database-panel" aria-labelledby="database-title">
+        <div class="panel-heading">
+          <h2 id="database-title">Database Validation</h2>
+          <p>This repo also has a separate database validation module for persistence practice.</p>
+        </div>
+      </section>
+
+      <section class="results" aria-live="polite">
+        <div class="results-title">
+          <h2>Latest Result</h2>
+          <button id="clearOutput" type="button">Clear</button>
+        </div>
+        <pre id="output">No action has run yet.</pre>
+      </section>
+    </main>
+
+    <script src="/app.js"></script>
+  </body>
+</html>

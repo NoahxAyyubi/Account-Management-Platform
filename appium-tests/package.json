@@ -1,0 +1,26 @@
+{
+  "name": "appium-tests",
+  "version": "1.0.0",
+  "description": "Local Appium tooling for AMP Android mobile automation tests.",
+  "private": true,
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "appium": "APPIUM_HOME=.appium appium",
+    "appium:version": "APPIUM_HOME=.appium appium -v",
+    "appium:drivers": "APPIUM_HOME=.appium appium driver list --installed",
+    "appium:install-uiautomator2": "APPIUM_HOME=.appium appium driver install uiautomator2",
+    "emulator:list": "~/Library/Android/sdk/emulator/emulator -list-avds",
+    "emulator:start": "~/Library/Android/sdk/emulator/emulator -avd AMP_Pixel_API_34 -no-snapshot -gpu swiftshader_indirect -verbose",
+    "adb:devices": "~/Library/Android/sdk/platform-tools/adb devices",
+    "test:demo-flow": "mvn clean test -DsuiteXmlFile=src/test/resources/testng-demo-flow.xml",
+    "test": "mvn clean test"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "appium": "^3.5.2"
+  }
+}
